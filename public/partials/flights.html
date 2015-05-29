@@ -1,0 +1,35 @@
+<h3>Search for flights</h3>
+
+<div class="controls controls-row">
+  <input type="text" class="input-small" placeholder="Origin" ng-model="search.origin" capitalize />
+  <input type="text" class="input-small" placeholder="Destination" ng-model="search.destination" capitalize />
+</div>
+
+<p ng-hide="filteredFlights.length">No flights available!</p>
+
+<table class="table" ng-show="filteredFlights.length">
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Origin</th>
+      <th>Destination</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="flight in filteredFlights = (flights | filter:search)">
+      <td>{{flight.number}}</td>
+      <td>
+        <a ng-href="#/airports/{{flight.origin}}">
+          {{flight | originTitle}}
+        </a>
+      </td>
+      <td>
+        <a ng-href="#/airports/{{flight.destination}}">
+          {{flight | destinationTitle}}
+        </a>
+      </td>
+      <td>{{flight.price | currency : "&euro; "}}</td>
+    </tr>
+  </tbody>
+</table>
