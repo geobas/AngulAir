@@ -11,5 +11,15 @@
   "license": "",
   "dependencies": {
     "express": "~3.1.1"
+  },
+  "scripts": {
+    "test": "karma start karma.conf.js"
+  },  
+  "devDependencies": {
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.12.31",
+    "karma-chrome-launcher": "^0.1.12",
+    "karma-jasmine": "^0.3.5",
+    "karma-firefox-launcher": "~1.0.0"
   }
 }

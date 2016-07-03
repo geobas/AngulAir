@@ -12,4 +12,4 @@ To get this server up and running, do the following:
 * Go to [http://localhost:3000](http://localhost:3000) in your browser. The port number can be changed in `index.js` if necessary
 
 ## Run unit tests
-Go to [http://localhost:3000/tests](http://localhost:3000/tests) in your browser
+Go to [http://localhost:3000/tests](http://localhost:3000/tests) in your browser OR type `npm test`
